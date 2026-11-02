@@ -56,3 +56,12 @@ res/          Resources (controllers/ JS/XML, skins/, qml/)
 cmake/        CMake modules
 tools/        Python helper scripts
 ```
+
+AI-generated preservation note at the repository owner's explicit request.
+
+For original Numark NV work, read bitedj-nv/docs/NV_EQ_FACTORY_MAPPING.md first.
+Preserve the original factory EQ order on all four channels. Keep the Pi source
+under bitedj-nv and its two res/controllers mapping copies synchronized. See
+README_NV.md and root CODEX_PROGRESS.md for the pinned Pi native build target.
+
+End AI-generated preservation note.
