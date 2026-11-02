@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-"""AI-generated documentation.
-Reproduce timing and direction-safe LED evidence offline, without MIDI output.
+"""Reproduce timing and direction-safe LED evidence offline, without MIDI output.
 Capture timing is not a hardware refresh-rate measurement.
-End AI-generated documentation.
 """
 import collections
 import hashlib

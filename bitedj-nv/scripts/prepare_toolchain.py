@@ -52,7 +52,7 @@ def main():
     WORK.mkdir(exist_ok=True)
     rootfs = WORK / 'rootfs'
     if not (rootfs / 'var/lib/dpkg/status').is_file():
-        raise SystemExit('Extract the baseline rootfs first (see CODEX_PROGRESS.md).')
+        raise SystemExit('Extract the baseline rootfs first (see PROJECT_PROGRESS.md).')
     key = WORK / 'debian-trixie-archive.asc'
     if not key.exists():
         with urllib.request.urlopen('https://ftp-master.debian.org/keys/archive-key-13.asc') as response:

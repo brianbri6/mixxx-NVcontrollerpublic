@@ -1,7 +1,5 @@
 # v0.5.8 — diagnostic and Serato/VDJ handoff integration
 
-AI-generated integration record.
-
 Sources: main fe7285ee679afdff677a634ecc96a1112ef0e88f handoff, diagnostic branch 6ef687287692065ab057973f46677a0be12d0ee6, Diagnostic v0.15 mapping catalog, user learned inputs, original NV manual v1.2 and four USB captures pinned in INPUTS.json. No proprietary IPA/APK bytes or music are included in source or releases.
 
 ## Findings applied
@@ -31,5 +29,3 @@ Native exporter/browser patch and exact v057 executable are unchanged. Hence pri
 4. Palette4/16 and masterVU red5 remain physical checks; use silent lamp tests. Record D.VIEW input/output with working vendor software to resolve three-view outputs. Do not replay unrelated startup/challenge traffic.
 
 For an A/B comparison on the Pi, stop the launcher-managed display service first so only one owns the MIDI ports, then run `python3 -m nvdisplay.service --mode full --transport-hz 20` or `--transport-hz 60` from the installed runtime directory. Keep the native snapshot producer/socket setting intact. Standard startup uses60Hz; full rollback restores previous cadence. Do not run competing raw MIDI writers.
-
-End AI-generated integration record.

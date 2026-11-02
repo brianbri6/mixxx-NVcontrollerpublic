@@ -26,4 +26,4 @@ Fourteen SD tests use fake block/probe/mount records and execute the real launch
 
 Hardware test: boot v0.5.5, expand Computer → Removable Devices → MUSIC, browse and load tracks, then export F12. Verify the path in status and playback/USB/NV behavior. If the card uses a different label/root layout or already has a custom mount, inspect diagnostics before any further change. Existing playlists tied to a different historical path may need a separate path-preserving solution. Do not guess the old mount path or automatically rewrite the library.
 
-Build/test commands and complete continuation state are in CODEX_PROGRESS.md and NEXT_TASK.md. Existing v0.5.4 and older archives remain unchanged.
+Build/test commands and complete continuation state are in PROJECT_PROGRESS.md and NEXT_TASK.md. Existing v0.5.4 and older archives remain unchanged.

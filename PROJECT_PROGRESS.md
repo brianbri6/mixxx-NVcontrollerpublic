@@ -1,7 +1,5 @@
 # Pi Numark NV v0.5.8 — fresh fork import
 
-AI-generated progress at the repository owner's explicit request, 2026-11-02.
-
 **Current status: v0.5.8 import published successfully to the public fork.** The previously recorded403 is historical. All113 imported source files remain unchanged;78 Python and33 controller tests already pass.
 
 ## Goal
@@ -17,7 +15,7 @@ Import our Pi4 4GB BiteDJ/original Numark NV v0.5.8 project into the fresh fork 
 
 ## Files changed
 
-Added bitedj-nv/, two res/controllers mappings, README_NV.md, CODEX_PROGRESS.md and NEXT_TASK.md. Append a factory-EQ preservation pointer to AGENTS.md.
+Added bitedj-nv/, two res/controllers mappings, README_NV.md, PROJECT_PROGRESS.md and NEXT_TASK.md. Append a factory-EQ preservation pointer to PROJECT_NOTES.md.
 
 ## Known bugs and pending checks
 
@@ -50,38 +48,31 @@ git diff --check
 
 Finish source/mapping integrity checks and tests, commit milestones locally, generate a binary-capable patch and Git bundle, and publish when the GitHub connection permits writes to this new repository. Preserve the original fresh-base history and user changes; never force-push.
 
-End AI-generated progress.
-
 ## Validation milestone — 2026-11-02
 
-AI-generated validation receipt.
 - PASS all78 Python tests with no skips, including the actual patched C++ mixed-folder eligibility method tested with minimal model doubles. PASS all33 JavaScript controller tests and launcher shell syntax.
 - All113 imported project files match their exact source Git blob hashes, and the imported bitedj-nv subtree is76336f3e1f704c735eae4ab5cfef32f9a7e4b7c0. Both res/controllers mirrors match their Pi originals.
-- Fresh upstream files are unchanged except the requested AGENTS.md preservation pointer. The root Mixxx application/build sources were not modified.
+- Fresh upstream files are unchanged except the requested PROJECT_NOTES.md preservation pointer. The root Mixxx application/build sources were not modified.
 - git diff --check reports11 inherited whitespace locations in the exact imported patch/reference/native-provenance files. They remain byte-identical to the delivered source; do not trim them to make this synchronization appear cleaner or invalidate saved native evidence. Newly written root documentation passes whitespace checks.
 - Native build, full capture rerun, GUI/audio/USB or physical Pi/NV tests were not performed. No new SD image is produced. Captures and prior native binaries are separate inputs.
 - GitHub publication remains blocked by403 Resource not accessible by integration on the new public repository. The connection must be granted write access there. No access-control workaround or force-push was attempted.
 - Local import milestone6da00502e is followed by this validation receipt. A ready-to-apply patch and Git bundle will contain only the changes after clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18.
 - Resume: enable the GitHub connection for brianbri6/mixxx-NVcontrollerpublic, inspect current remote main, then publish the prepared import using an expected-head check and fast-forward history. The owner can alternatively apply the patch with git am --whitespace=nowarn and push normally. Preserve any newer remote changes.
 
-End AI-generated validation receipt.
-
 ## Prepared import archive
-
-AI-generated artifact receipt, 2026-11-02.
 
 Created and verified dist/BiteDJ_NV_v058_FreshFork_Import_2026-11-02.zip (workspace-level dist):1228060 bytes, SHA25686cdb15e11e26f6b7bcb6b8d76c341545381516d0adfea78f365149e53fc5a32. Contains the two-commit import through09bae02392b8e43d7fd591ce5f6347a2dd6ce915 as a binary-capable patch and verified Git bundle, reviewable source, test logs and application instructions. ZIP CRC and all packaged bytes pass. The bundle requires fresh basebc49961fd3e5a46cd46588090c652a0d7ec44e18. This receipt postdates the immutable archive; source code is identical. Remote publication is still blocked by the connected integration's GitHub403 write-access error. Next step is repository write access or owner application of the included patch and normal push.
 
-End AI-generated artifact receipt.
-
-AI-generated retry note. The owner requested another write attempt. GitHub create_tree now succeeds for the new public fork. Remote main remains clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18. Published the prepared import with an expected-head guard; no force-push or additional runtime changes. End AI-generated retry note.
+The owner requested another write attempt. GitHub create_tree now succeeds for the new public fork. Remote main remains clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18. Published the prepared import with an expected-head guard; no force-push or additional runtime changes.
 
 ## Successful publication receipt — 2026-11-02
-
-AI-generated publication receipt at the owner request.
 
 GitHub main was fast-forwarded from clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18 to import820b40c46634220f31dedb77e0cc6bf0f2acfc02. The imported tree matches the validated local treea3a020d4b8165101df9b5b8eccb390a29634a372. All113 original Pi files, both controller copies and the factory EQ preservation note are present. Earlier403 write restrictions are resolved. No runtime changes were introduced during this retry; the78 Python/33 JavaScript results remain applicable. The original fresh Mixxx application/build sources and history are retained.
 
 Source synchronization is complete. Continue with the documented installable-image recovery and physical NV/Pi acceptance, or a separately scoped port of the Pi native exporter to the newer root Mixxx API. Do not repeat the import or apply the older prepared patch to this now-updated main.
 
-End AI-generated publication receipt.
+## Documentation maintenance — 2026-11-02
+
+Standardized documentation and code comments, renamed maintenance logs to PROJECT_PROGRESS.md, and consolidated architecture/mapping guidance in PROJECT_NOTES.md. Updated links and source/recovery/release packaging paths. Controller actions, display scheduling, native source, licensing and factory EQ assignments are preserved. Validation includes controller/display regressions, script compilation and a fresh source package after commit.
+
+Validation:78 Python tests and33 controller tests pass. Updated packaging scripts compile with warnings treated as errors. Mirrored controller files match; documentation links use the new maintenance-log filenames.

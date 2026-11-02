@@ -85,8 +85,7 @@ def main():
     patch_text = (previous.read('source/bitedj-nv.patch').decode() if validation['native_reused_from_v05']
                   else ''.join(patch))
     (package/'bitedj-nv.patch').write_text(patch_text)
-    attribution = f'''AI-generated source attribution and revision notes.
-BiteDJ official source: https://github.com/TeamDeckshark/bitedj
+    attribution = f'''BiteDJ official source: https://github.com/TeamDeckshark/bitedj
 Base commit: {PIN}
 Upstream Mixxx base: 2.5.6
 Apply source/bitedj-nv.patch to this exact source revision.
@@ -113,7 +112,6 @@ The optional browser-view test uses captured B0 16 00/01; preserve is the defaul
 v0.5.8 has its own slot and journal. Rollback returns to the previous version,
 including v0.5.7. No physical NV/Pi test was performed. D. VIEW cycling, cue/loop
 overlays, detailed LCD FX enable/parameter graphics and artwork remain unresolved.
-End AI-generated source attribution and revision notes.
 '''
     paths = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
     OUT.parent.mkdir(exist_ok=True)
@@ -123,7 +121,7 @@ End AI-generated source attribution and revision notes.
             z.writestr(name, data)
             manifest[name] = hashlib.sha256(data).hexdigest()
         put('README_FIRST.md', (ROOT/'README.md').read_bytes())
-        put('CODEX_PROGRESS.md', (ROOT/'CODEX_PROGRESS.md').read_bytes())
+        put('PROJECT_PROGRESS.md', (ROOT/'PROJECT_PROGRESS.md').read_bytes())
         put('NEXT_TASK.md', (ROOT/'NEXT_TASK.md').read_bytes())
         put('install/initramfs.img', image)
         # The mode file is optional: copy only initramfs for an SD-only update.

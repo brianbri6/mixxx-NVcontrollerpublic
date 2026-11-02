@@ -1,7 +1,5 @@
 # Pi4 / original Numark NV — v0.5.8 source package
 
-AI-generated source-package instructions.
-
 This ZIP contains the complete tracked **BiteDJ Pi integration project** with all current changes. It is for Raspberry Pi4 4GB and the original Numark NV. Open this file first; README.md also contains instructions for the separate installable update, which is still pending recovery of its build inputs.
 
 ## Included
@@ -10,7 +8,7 @@ This ZIP contains the complete tracked **BiteDJ Pi integration project** with al
 - Native C++ NV exporter, mixed-folder patch and exact upstream application/build scripts.
 - Python LCD renderer/protocol/queue and bounded target60Hz transport, while native waveform snapshots remain20Hz.
 - SD MUSIC helper, launcher, reversible v058 installer and rollback implementation.
-- Tests and fixtures, diagnostic mapping catalog, capture-derived evidence, the Serato/VDJ handoff, licenses, CODEX_PROGRESS.md and NEXT_TASK.md.
+- Tests and fixtures, diagnostic mapping catalog, capture-derived evidence, the Serato/VDJ handoff, licenses, PROJECT_PROGRESS.md and NEXT_TASK.md.
 - SOURCE_ORIGIN.json identifies the exact source commit and subtree; SOURCE_SHA256SUMS.txt hashes this snapshot. SOURCE_MANIFEST.json is an older historical recovery manifest and is not the current ZIP's checksum list.
 
 The unchanged upstream BiteDJ source is fetched at the pinned commit below. Raw USB captures/manual and baseline release images are separate inputs listed in INPUTS.json. No compiled application, initramfs, SD image, Android app, proprietary APK/IPA, music, dependency cache or credentials are included.
@@ -70,5 +68,3 @@ The packager refuses to overwrite an existing ZIP and verifies every member afte
 The parent-folder/direct-song fix, SD MUSIC support, scratch tuning, VU clearing, FX/pad/browser controls and current audio/HDMI settings are preserved. Keep HDMI waveforms disabled as in the smooth Pi4 setup. No Android changes were made.
 
 Outgoing D.VIEW three-view selection, artwork/beat/cue/loop graphics, physical masterVU/red confirmation and sustained audio/headless acceptance remain open. Learned D.VIEW input observations are included; no unknown output commands are guessed. Serato architecture findings do not contain decrypted DSP/stems algorithms. See docs/NV_INTEGRATION_V058.md for the hardware checklist.
-
-End AI-generated source-package instructions.

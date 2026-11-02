@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""AI-generated documentation.
-Package the committed Pi integration source without native binaries or images.
-End AI-generated documentation.
+"""Package the committed Pi integration source without native binaries or images.
 """
 import argparse
 import hashlib

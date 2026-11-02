@@ -1,9 +1,7 @@
 # SPDX-License-Identifier: MIT
-"""AI-generated documentation.
-Bounded display-only prediction from the native 20 Hz snapshots. This module
+"""Bounded display-only prediction from the native 20 Hz snapshots. This module
 never reads tracks, analyzes peaks, or controls audio. Limits are engineering
 choices for testing, not measured firmware requirements.
-End AI-generated documentation.
 """
 import math
 

@@ -2,14 +2,12 @@
 
 Standalone Raspberry Pi4 4GB: HDMI for music selection/settings, NV LCDs for track information, BPM and experimental waveforms. This is a **reversible update for the saved Pi4 HDMI NV v0.3 image**, including installations already updated to v0.4, v0.5, v0.5.1, v0.5.2, v0.5.3, v0.5.4, v0.5.5, v0.5.6 or v0.5.7. It is not a complete SD image, an NVII update, or an updater for stock Deckshark.
 
-AI-generated revision notes.
 **v0.5.8 integrates the diagnostic mappings and the 2026-10-20 Serato/VirtualDJ handoff.** The separate display process now targets 60 lightweight position/platter messages per second per deck, using bounded prediction from the existing native 20 Hz snapshots. Waveform analysis and text sampling rates stay unchanged. The queue reserves enough budget to begin a whole tile, so partial budget cannot stall newer position messages. Actual USB backpressure can still reduce update cadence; physical smoothness needs Pi/NV testing.
 
 Preserves v0.5.7 parent-folder songs alongside subfolders, the working SD music helper, scratch tuning, VU clearing, HDMI waveform preferences and audio settings. The physical Sel press now uses the same navigation path: normal push opens the selected folder's songs, Shift+push expands/collapses children, and push from tracks returns to folders. This release does not contain recovered Serato DSP or stems algorithms.
 
 **Delivery status, 2026-10-20:** v0.5.8 source is published on `nv-learned-inputs-led-discovery-20261019`. The first validated ZIP was lost during workspace cleanup before it was saved or delivered. The replacement archive is reserved as `BiteDJ_Pi4_NV_Display_Test_v0_5_8_r1.zip` (same runtime version), but has not been built yet: recovery downloads currently fail with HTTP 403. The latest saved installable release remains v0.5.7. The installation instructions below apply when the replacement archive is available; source publication alone is not a hardware test.
 For the new source-only archive, start with **SOURCE_README.md**. It contains all tracked Pi integration changes and reproducible setup/package commands. Building this source ZIP does not require the missing native binary or SD image; those inputs are only needed to create the installable update.
-End AI-generated revision notes.
 
 ## What changed
 
@@ -87,7 +85,7 @@ For the red LED test, use `"vuTest": true` or the supplied `settings/lamp-test/`
 | Shift + FX button | Select the next effect in that slot |
 | Shift + first FX knob | Adjust that side's FX unit wet/dry mix |
 
-AI-generated FX notes. An empty slot loads an available effect when pressed. **Shift + first FX knob** sets wet/dry; enabling preserves its current value. An unused unit initially routes to the last observed deck on that side (fallback 1/2). Once you use the explicit assignment buttons, slot buttons respect your routing, including deliberately assigning no channel. Channel A/B and master A/B can operate together as specified by the original NV manual. Single-effect parameter pages and touch-mode activation remain observation-only until mapped to explicit, tested Mixxx behavior. End AI-generated FX notes.
+An empty slot loads an available effect when pressed. **Shift + first FX knob** sets wet/dry; enabling preserves its current value. An unused unit initially routes to the last observed deck on that side (fallback 1/2). Once you use the explicit assignment buttons, slot buttons respect your routing, including deliberately assigning no channel. Channel A/B and master A/B can operate together as specified by the original NV manual. Single-effect parameter pages and touch-mode activation remain observation-only until mapped to explicit, tested Mixxx behavior.
 
 Cue mode colors assigned hot cues; empty cues are dark. Loop/roll mode colors available pads when a track is loaded; active loops/held rolls blink. Sampler mode colors loaded samplers and blinks during playback. Slicer remains disabled. Colors are per pad number across modes/decks and use the captured codes listed above; they do not yet track custom cue colors from the software.
 
@@ -108,7 +106,7 @@ Load analyzed tracks on decks 1/2, keeping HDMI waveforms disabled. Allow the in
 
 The supplied NV manual confirms Performance 1, Performance 2 and Library views, with D. VIEW advancing views and Sel opening Library. It provides no MIDI commands. See [manual findings](docs/NV_MANUAL.md) for the intended behavior and remaining evidence. The documented views do not include album artwork.
 
-AI-generated D. VIEW notes. **Incoming D. VIEW values are now identified:** controller IN `B0 61/62 00/01/02`. The mapping records these states without echoing them as guessed output. The outgoing three-view command remains unresolved. F12 includes bounded `BiteDJNV learned IN` labels; an isolated Serato/VirtualDJ capture and video are still needed to match outgoing traffic to each visible view. End AI-generated D. VIEW notes.
+VIEW notes. **Incoming D. VIEW values are now identified:** controller IN `B0 61/62 00/01/02`. The mapping records these states without echoing them as guessed output. The outgoing three-view command remains unresolved. F12 includes bounded `BiteDJNV learned IN` labels; an isolated Serato/VirtualDJ capture and video are still needed to match outgoing traffic to each visible view. VIEW notes.
 
 To identify the outgoing view and remaining fields, a short USBPcap recording with working Serato/VirtualDJ is also needed: show three D. VIEW presses on each side, set/move a hot cue, change loop length and FX numeric/enable controls. Include a brief action order or screen video. Existing captures contain no identified D. VIEW sequence and no nonzero cue positions. The 2026-10-10 audit **does** recover populated FX labels and browser text from the retained files, so their basic layouts do not require another capture.
 
@@ -154,7 +152,7 @@ Keep the rollback marker to prevent reinstalling, or restore the exact initramfs
 
 ## Rebuild and continue
 
-Read `CODEX_PROGRESS.md` and `NEXT_TASK.md`. The checkpoint retains native/build artifacts and all four captures; GITHUB_SOURCE.json pins the matching source/history on GitHub. Restore the v0.3 image and v0.5/v0.5.1/v0.5.2/v0.5.3/v0.5.4/v0.5.5/v0.5.6/v0.5.7 ZIPs to their pinned `baseline/` paths in INPUTS.json. On Linux with Python 3, `zstandard`, Node.js and `debugfs`:
+Read `PROJECT_PROGRESS.md` and `NEXT_TASK.md`. The checkpoint retains native/build artifacts and all four captures; GITHUB_SOURCE.json pins the matching source/history on GitHub. Restore the v0.3 image and v0.5/v0.5.1/v0.5.2/v0.5.3/v0.5.4/v0.5.5/v0.5.6/v0.5.7 ZIPs to their pinned `baseline/` paths in INPUTS.json. On Linux with Python 3, `zstandard`, Node.js and `debugfs`:
 
 ```sh
 # Skip extraction/checkout/toolchain setup if those exact inputs already exist.
@@ -186,6 +184,4 @@ The build uses the hash-verified libkeyfinder source from v0.5, supporting offli
 
 `python3 scripts/smoke_arm.py` can test native datagrams on a permitted host; do not bypass this environment's Unix-socket restriction. Preserve the appliance's real-time settings and bounded display queue. Native changes use GPL-2.0-or-later; Python integration uses MIT. The package includes source, patch, dependency source, attribution and licenses.
 
-AI-generated handoff integration notes.
 See `docs/NV_SERATO_IOS_HANDOFF_2026-10-20.md`, `docs/NV_INTEGRATION_V058.md` and reproducible `docs/HANDOFF_EVIDENCE.json`. Serato's GPU-waveform and stems type names are design clues for the separate Android project, not decoded algorithms or NV LED addresses. The Pi continues to use the analyzed waveform cache already provided by BiteDJ.
-End AI-generated handoff integration notes.

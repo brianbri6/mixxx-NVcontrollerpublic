@@ -725,8 +725,8 @@ BiteDJNV.testDiscoveredLED = function(number,on) {
     if(safe.indexOf(number)<0)throw new Error('Unverified LED address');
     BiteDJNV.sendLED(0x90,number,on?127:0,true);
 };
-// AI-generated integration notes: Direction and exact values are required.
-// Unassigned sensors/view states remain observations. End AI-generated notes.
+// Direction and exact values are required.
+// Unassigned sensors/view states remain observations.
 BiteDJNV.ensureFxRoute = function(unit, deck) {
     var routed = engine.getValue(unit, 'group_[Main]_enable');
     for (var d=1; d<=4; d++) { routed = routed || engine.getValue(unit, 'group_[Channel'+d+']_enable'); }

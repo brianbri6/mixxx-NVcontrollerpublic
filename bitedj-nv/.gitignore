@@ -11,7 +11,6 @@ __pycache__/
 /project_sources/*.pcapng
 /project_sources/*.pdf
 /node_modules/
-/.codex/
 /.cache/
 
 /downloads/
