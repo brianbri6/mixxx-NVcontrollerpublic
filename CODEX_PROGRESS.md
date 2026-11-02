@@ -2,7 +2,7 @@
 
 AI-generated progress at the repository owner's explicit request, 2026-11-02.
 
-**Current status: write access restored on retry; validated import ready for publication.** The previously recorded403 is historical. All113 imported source files remain unchanged;78 Python and33 controller tests already pass.
+**Current status: v0.5.8 import published successfully to the public fork.** The previously recorded403 is historical. All113 imported source files remain unchanged;78 Python and33 controller tests already pass.
 
 ## Goal
 
@@ -74,4 +74,14 @@ Created and verified dist/BiteDJ_NV_v058_FreshFork_Import_2026-11-02.zip (worksp
 
 End AI-generated artifact receipt.
 
-AI-generated retry note. The owner requested another write attempt. GitHub create_tree now succeeds for the new public fork. Remote main remains clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18. Publishing the prepared import with an expected-head guard; no force-push or additional runtime changes. End AI-generated retry note.
+AI-generated retry note. The owner requested another write attempt. GitHub create_tree now succeeds for the new public fork. Remote main remains clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18. Published the prepared import with an expected-head guard; no force-push or additional runtime changes. End AI-generated retry note.
+
+## Successful publication receipt — 2026-11-02
+
+AI-generated publication receipt at the owner request.
+
+GitHub main was fast-forwarded from clean basebc49961fd3e5a46cd46588090c652a0d7ec44e18 to import820b40c46634220f31dedb77e0cc6bf0f2acfc02. The imported tree matches the validated local treea3a020d4b8165101df9b5b8eccb390a29634a372. All113 original Pi files, both controller copies and the factory EQ preservation note are present. Earlier403 write restrictions are resolved. No runtime changes were introduced during this retry; the78 Python/33 JavaScript results remain applicable. The original fresh Mixxx application/build sources and history are retained.
+
+Source synchronization is complete. Continue with the documented installable-image recovery and physical NV/Pi acceptance, or a separately scoped port of the Pi native exporter to the newer root Mixxx API. Do not repeat the import or apply the older prepared patch to this now-updated main.
+
+End AI-generated publication receipt.
